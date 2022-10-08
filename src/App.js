@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { WEATHER_API_KEY, WEATHER_API_URL } from './api';
 import './App.css';
 import CurrentWeather from './components/CurrentWeather/CurrentWeather';
+import Forecast from './components/Forecast/Forecast';
+import Header from './components/Header';
 import Search from './components/Search/Search';
 
 function App() {
@@ -24,13 +26,16 @@ function App() {
             })
             .catch((err) => console.log(err));
     };
-    console.log(currentWeather);
-    console.log(currentWeather);
     return (
-        <div className="md:max-w-[1080px] my-10 mx-auto">
-            <Search onSearchChange={handleOnSearchChange} />
-            {currentWeather && <CurrentWeather data={currentWeather} />}
-        </div>
+        <>
+            <Header />
+            <div className="md:max-w-[1080px] my-6 mx-auto">
+                <Search onSearchChange={handleOnSearchChange} />
+                {currentWeather && <CurrentWeather data={currentWeather} />}
+
+                {forecastWeather && <Forecast data={forecastWeather} />}
+            </div>
+        </>
     );
 }
 
