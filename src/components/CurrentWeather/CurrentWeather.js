@@ -13,26 +13,28 @@ const CurrentWeather = () => {
                 <img src={sunny} className="w-24" alt="sunny" />
             </div>
             <div className="flex justify-between items-center">
-                <p className="tem">30°C</p>
-                <div className="tdet">
-                    <div className="par">
-                        <span className="label">Details</span>
+                <p className="font-bold text-5xl w-auto my-10 mx-0">30°C</p>
+                <div className="w-full pl-5">
+                    <div className="flex justify-between items-center">
+                        <span className="text-left font-normal text-[12px] border-b border-white">
+                            Details
+                        </span>
                     </div>
-                    <div className="par">
-                        <span className="label">Feels Like</span>
-                        <span className="label">34°C</span>
+                    <div className="flex justify-between items-center">
+                        <span className="text-left font-normal text-[12px]">Feels Like</span>
+                        <span className="text-right font-semibold text-[12px]">34°C</span>
                     </div>
-                    <div className="par">
-                        <span className="label">Wind</span>
-                        <span className="label">2 m/s</span>
+                    <div className="flex justify-between items-center">
+                        <span className="text-left font-normal text-[12px]">Wind</span>
+                        <span className="text-right font-semibold text-[12px]">2 m/s</span>
                     </div>
-                    <div className="par">
-                        <span className="label">Humidity</span>
-                        <span className="label">15%</span>
+                    <div className="flex justify-between items-center">
+                        <span className="text-left font-normal text-[12px]">Humidity</span>
+                        <span className="text-right font-semibold text-[12px]">15%</span>
                     </div>
-                    <div className="par">
-                        <span className="label">presure</span>
-                        <span className="label">15 hp/s</span>
+                    <div className="flex justify-between items-center">
+                        <span className="text-left font-normal text-[12px]">presure</span>
+                        <span className="text-right font-semibold text-[12px]">15 hp/s</span>
                     </div>
                 </div>
             </div>
